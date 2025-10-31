@@ -1,5 +1,6 @@
 package com.example.pizza_ordering_system.service.impl;
 
+import com.example.pizza_ordering_system.exception.ResourceNotFoundException;
 import com.example.pizza_ordering_system.model.Store;
 import com.example.pizza_ordering_system.repository.StoreRepository;
 import com.example.pizza_ordering_system.service.interfaces.StoreService;
@@ -23,6 +24,10 @@ public class StoreServiceImpl implements StoreService {
 
     @Override
     public List<Store> getAllStores() {
-        return storeRepository.findAll();
+        List<Store> stores = storeRepository.findAll();
+        if (stores.isEmpty()) {
+            throw new ResourceNotFoundException("No stores available");
+        }
+        return stores;
     }
 }
