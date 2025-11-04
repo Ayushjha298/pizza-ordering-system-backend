@@ -2,7 +2,7 @@ package com.example.pizza_ordering_system.service.impl;
 
 import com.example.pizza_ordering_system.exception.ResourceNotFoundException;
 import com.example.pizza_ordering_system.model.Store;
-import com.example.pizza_ordering_system.model.repository.StoreRepository;
+import com.example.pizza_ordering_system.repository.StoreRepository;
 import com.example.pizza_ordering_system.service.interfaces.StoreService;
 import org.springframework.stereotype.Service;
 
