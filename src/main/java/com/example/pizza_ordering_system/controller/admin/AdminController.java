@@ -48,6 +48,7 @@ public class AdminController {
         return ResponseEntity.ok(response);
     }
 
+    // 1234567890-09876547943rflk
     // *************************************************************************************
     @DeleteMapping("/stores/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteStore(@PathVariable Long id) {
